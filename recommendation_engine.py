@@ -5,9 +5,10 @@ import networkx as nx
 from apyori import apriori
 
 # Load your data
-def load_data(path='groceries.csv'):
+def load_data(path="Grocery.csv"):
     df = pd.read_csv(path)
     return df
+
 
 # Preprocess the data
 def preprocess_data(df):
