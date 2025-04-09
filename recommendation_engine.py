@@ -11,7 +11,8 @@ import pandas as pd
 # In[5]:
 
 
-df= pd.read_csv("C:\\Users\\hp\\Documents\\Grocery.csv",header=None)
+df = pd.read_csv("Grocery.csv", header=None)
+
 
 
 # In[6]:
