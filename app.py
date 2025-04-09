@@ -1,5 +1,6 @@
 import streamlit as st
-from recommendation_engine import *  # Make sure your function is defined here
+from recommendation_engine import recommend_items
+ 
 
 st.set_page_config(page_title="Grocery Recommendation", page_icon="🛒")
 st.title("🛒 Grocery Recommendation System")

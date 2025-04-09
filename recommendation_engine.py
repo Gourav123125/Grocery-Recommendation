@@ -5,7 +5,7 @@ import networkx as nx
 from apyori import apriori
 
 # Load your data
-def load_data(path='Groceries_dataset.csv'):
+def load_data(path='groceries.csv'):
     df = pd.read_csv(path)
     return df
 
