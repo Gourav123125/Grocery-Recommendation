@@ -37,7 +37,7 @@ cleaned_data = [[item for item in row if not pd.isna(item)] for row in data_list
 # In[18]:
 
 
-get_ipython().system('pip install apyori')
+
 
 
 # In[19]:
