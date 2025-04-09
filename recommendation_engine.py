@@ -43,3 +43,18 @@ def plot_top_items(df, top_n=10):
     plt.ylabel("Items")
     plt.tight_layout()
     plt.show()
+# Load data and rules once to reuse
+df = load_data()
+basket = preprocess_data(df)
+rules_df = generate_rules(basket.tolist())
+
+# Function to get recommendations for multiple items
+def recommend_items(user_input):
+    items = [item.strip().lower() for item in user_input.split(',')]
+    recommendations = pd.DataFrame()
+    for item in items:
+        recs = get_recommendations(item, rules_df)
+        recommendations = pd.concat([recommendations, recs])
+    # Drop duplicates if multiple items recommend the same thing
+    recommendations = recommendations.drop_duplicates(subset=['Recommended Item'])
+    return recommendations[['Recommended Item', 'Confidence', 'Lift']]
