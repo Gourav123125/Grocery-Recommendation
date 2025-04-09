@@ -7,7 +7,7 @@ st.markdown("Enter grocery items you plan to buy, and get smart suggestions!")
 
 df = load_data()
 basket = preprocess_data(df)
-rules_df = generate_rules(basket.tolist())
+rules_df = generate_rules(basket.values)
 
 user_input = st.text_input("Enter items (comma-separated):", placeholder="e.g. milk, bread, eggs")
 
